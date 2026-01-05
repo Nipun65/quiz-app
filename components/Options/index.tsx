@@ -1,5 +1,5 @@
 import { Option } from '@/types/exam';
-import styles from './exam.module.css';
+import styles from './index.module.css';
 
 export type ExamOptionsProps = {
   options: Option[];
@@ -7,11 +7,9 @@ export type ExamOptionsProps = {
   onSelect: (id: string) => void;
 };
 
-export default function Options({
-  options,
+const Options:React.FC<ExamOptionsProps> = ({options,
   selected,
-  onSelect,
-}: ExamOptionsProps) {
+  onSelect,}) => {
   return (
     <div className={styles.options}>
       {options.map((opt) => (
@@ -28,3 +26,5 @@ export default function Options({
     </div>
   );
 }
+
+export default Options
