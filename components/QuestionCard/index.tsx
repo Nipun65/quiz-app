@@ -32,7 +32,6 @@ export default memo(function QuestionCard({
   time,
   startTime
 }: Props) {
-  console.log(question,"question")
   return (
     <div className={styles.container}>
     <header className={styles.header}>
